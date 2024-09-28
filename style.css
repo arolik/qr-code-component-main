@@ -1,4 +1,62 @@
-h1 {
-    font-size: 30px;
-    color: red;
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    /* colors */
+    --white: hsl(0, 0%, 100%);
+    --shade-300: hsl(212, 45%, 89%);
+    --shade-500: hsl(216, 15%, 48%);
+    --shade-900: hsl(218, 44%, 22%);
+    /* typography */
+    --fs-base: 15px;
+    --family: "Outfit", system-ui;
+    --weight-normal: 400;
+    --weight-bold: 700;
+    /* other */
+    --radi: 1rem;
+}
+
+body {
+    margin: 0;
+    font-family: var(--family);
+    background-color: var(--shade-300);
+    color: var(--white);
+    font-size: var(--fs-base);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.qr-card {
+    width: min-content;
+    height: auto;
+    background-color: var(--white);
+    padding: 10px;
+    border-radius: var(--radi);
+}
+
+.qr-card__img img {
+    width: 250px;
+    border-radius: var(--radi);
+}
+
+.qr-card__desc {
+    display: flex;
+    flex-direction: column;
+}
+.desc-title {
+    color: var(--shade-900);
+    text-align: center;
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.desc-text {
+    color: var(--shade-500);
+    text-align: center;
+    margin-bottom: 25px;
 }
